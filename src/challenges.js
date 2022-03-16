@@ -2,11 +2,10 @@
 function compareTrue(p1, p2) {
   if (p1 && p2 === false) {
     return false;
-  } else if (p1 && p2 === true) {
+  } if (p1 && p2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 console.log(compareTrue(true, false));
