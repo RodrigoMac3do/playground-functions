@@ -8,9 +8,9 @@ function compareTrue(p1, p2) {
   return false;
 }
 
-console.log(compareTrue(true, false));
-console.log(compareTrue(true, true));
-console.log(compareTrue(false, false));
+compareTrue(true, false);
+compareTrue(true, true);
+compareTrue(false, false);
 
 // Desafio 2
 function calcArea(base, height) {
@@ -28,32 +28,35 @@ function calcArea(base, height) {
   }
 }
 
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
+calcArea(10, 50);
+calcArea(5, 2);
+calcArea(51, 1);
 
 // Desafio 3
-function splitSentence(s1) {
-  const myArray = s1.split(' ');
-  // const myArray2 = s2.split(' ');
-  // const myArray3 = s3.split(' ');
-  if (myArray) {
-    return myArray;
-    // } if (myArray2) {
-    //   return myArray2;
-    // }
-    // return myArray3;
-  }
+function splitSentence(string) {
+  const array = string.split(' '); // https://www.w3schools.com/jsref/jsref_split.asp
+  return array;
 }
 
-console.log(splitSentence('go Trybe'));
-// console.log(splitSentence(s2));
-// console.log(splitSentence(s3));
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
+splitSentence('foguete');
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let firstName = nomes[0];
+  let lastName = nomes[nomes.length - 1];
+  let result = [lastName, firstName];
+
+  return result;
 }
+
+let n1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let n2 = ['foguete', 'não', 'tem', 'ré'];
+let n3 = ['captain', 'my', 'captain'];
+console.log(concatName(n1));
+console.log(concatName(n2));
+console.log(concatName(n3));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -62,15 +65,14 @@ function footballPoints(wins, ties) {
   return ((a) + b);
 }
 
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
+footballPoints(14, 8);
+footballPoints(1, 2);
+footballPoints(0, 0);
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
-}
 
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
