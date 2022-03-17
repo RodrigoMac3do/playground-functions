@@ -33,9 +33,22 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(s1) {
+  const myArray = s1.split(' ');
+  // const myArray2 = s2.split(' ');
+  // const myArray3 = s3.split(' ');
+  if (myArray) {
+    return myArray;
+    // } if (myArray2) {
+    //   return myArray2;
+    // }
+    // return myArray3;
+  }
 }
+
+console.log(splitSentence('go Trybe'));
+// console.log(splitSentence(s2));
+// console.log(splitSentence(s3));
 
 // Desafio 4
 function concatName() {
