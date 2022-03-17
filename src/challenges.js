@@ -56,9 +56,15 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let a = wins * (3);
+  let b = ties * (1); // http://www.w3bai.com/pt/js/js_arithmetic.html
+  return ((a) + b);
 }
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
