@@ -46,7 +46,7 @@ splitSentence('foguete');
 function concatName(nomes) {
   let firstName = nomes[0];
   let lastName = nomes[nomes.length - 1];
-  let result = lastName + ', ' + firstName;
+  let result = `${lastName}, ${firstName}`;
 
   return result;
 }
@@ -109,18 +109,28 @@ function decode() {
 }
 
 // Desafio 10
-function techList(ntech) {
-  let n2 = {
+function techList(ntech, no) {
+  ntech = ntech.sort();
+  let arrayTech = [{
     tech: ntech[0],
-    name: ntech[ntech.length - 1]
-  };
-  for (let i = 0; i < ntech.length; i += 1) {
-    console.log
+    name: no,
+  }];
+  if (ntech.length === 0) {
+    return 'Vazio!';
   }
-  return n2;
+  for (let i = 1; i < ntech.length; i += 1) {
+    let novoValor = {
+      tech: ntech[i],
+      name: no,
+    };
+    arrayTech.push(novoValor);
+  }
+  return arrayTech.sort();
 }
-let ntech = ['React', 'Python', 'CSS', 'Rodrigo'];
-console.log(techList(ntech));
+
+let array1 = ['React', 'Python', 'CSS', 'JavaScript', 'HTML'];
+let nome = 'Rodrigo';
+console.log(techList(array1, nome));
 
 module.exports = {
   calcArea,
