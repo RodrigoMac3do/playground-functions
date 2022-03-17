@@ -46,7 +46,7 @@ splitSentence('foguete');
 function concatName(nomes) {
   let firstName = nomes[0];
   let lastName = nomes[nomes.length - 1];
-  let result = (lastName + ', ' + firstName);
+  let result = lastName + ', ' + firstName;
 
   return result;
 }
@@ -71,21 +71,21 @@ footballPoints(0, 0);
 
 // Desafio 6
 function highestCount(o) {
+  let maiorNumero = Math.max.apply(null, o);
+  // console.log(maiorNumero);
   let contador = 0;
-  let maior = Math.max.apply(null, o);
   for (let i = 0; i < o.length; i += 1) {
-      if (o[i] > maior) {
-          return contador = o[i];
-      }
+    if (maiorNumero === o[i]) {
+      contador += 1;
+    }
   }
+  return contador;
 }
 
 let a1 = [9, 1, 2, 3, 9, 5, 7];
 let a2 = [0, 4, 4, 4, 9, 2, 1];
 let a3 = [0, 0, 0];
-// console.log(a1);
-// console.log(a2);
-// console.log(a3);
+
 highestCount(a1);
 highestCount(a2);
 highestCount(a3);
@@ -111,8 +111,8 @@ function decode() {
 // Desafio 10
 function techList(ntech) {
   let n2 = {
-      tech: ntech[0],
-      name: ntech[ntech.length -1]
+    tech: ntech[0],
+    name: ntech[ntech.length - 1]
   };
   for (let i = 0; i < ntech.length; i += 1) {
     console.log
